@@ -10,9 +10,9 @@ const Expenses = () => {
   ];
   return (
     <Card className="expenses">
-      {expenses.map((expense) => {
+      {expenses.map((expense,index) => {
         return (
-          <ExpenseItem
+          <ExpenseItem Id={index+1}
             ExpenseDate={expense.ExpenseDate}
             LocationOfExpenditure={expense.LocationOfExpenditure}
             amount={expense.amount}
