@@ -3,13 +3,18 @@ import ExpenseActions from './ExpenseActions';
 import ExpenseInputs from './ExpenseInputs';
 
 const ExpenseForm = () => {
-  
-  const addExpense = (e) => {
-    console.log(e.target.value);
-  }
 
+  const submitform = (event) => {
+    event.preventDefault();
+    const inputs = {
+      amount: event.target.amount.value,
+      LOE: event.target.LOE.value,
+      date: event.target.date.value
+    }
+    console.log(inputs);
+  }
   return (
-    <form onChange={addExpense} id="addExpense" className="expenseform">
+    <form onSubmit={submitform} id="addExpense" className="expenseform">
       <ExpenseInputs />
       <ExpenseActions />
     </form>
