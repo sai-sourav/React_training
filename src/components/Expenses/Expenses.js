@@ -3,7 +3,7 @@ import "./Expenses.css";
 import Card from '../UI/Card';
 import { useState } from "react";
 import ExpensesList from "./ExpensesList";
-
+import ExpensesChart from "./ExpensesChart";
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState('2023');
 
@@ -17,7 +17,7 @@ const Expenses = (props) => {
   return (
     <Card className="expenses">
       <Expensesfilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
-
+      <ExpensesChart expenses={filteredExpenses} />
       {/* conditional rendering type 1: using terinnary operator*/}
       {/* {filteredExpenses.length === 0 ? (<p>No expenses to show</p>) : (
           filteredExpenses.map((expense,index) => {
