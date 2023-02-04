@@ -6,3 +6,8 @@
     width: 50rem;
     max-width: 95%;
 }
+
+.oneexpenseonly {
+    color: white;
+    text-align: left;
+}
