@@ -64,15 +64,15 @@ const ExpenseForm = (props) => {
     <form onSubmit={submitform} id="addExpense" className="expenseform">
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
-          <label for="amount">Amount: </label>
+          <label htmlFor="amount">Amount: </label>
           <input type="number" value={Amount} onChange={addamount} name="amount" id="amount"></input><br />
         </div>
         <div className='new-expense__control'>
-          <label for="LOE">Type of Expense: </label>
+          <label htmlFor="LOE">Type of Expense: </label>
           <input type="text" value={title} onChange={addLOE} name="LOE" id="LOE"></input><br />
         </div>
         <div className='new-expense__control'>
-          <label for="date">Date: </label>
+          <label htmlFor="date">Date: </label>
           <input type="date" value={date} onChange={adddate} name="date" id="date"></input><br />
         </div>
       </div>

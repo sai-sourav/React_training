@@ -15,7 +15,7 @@ const ExpenseItem = (props) => {
     <Card className="expense-item">
       <ExpenseDate ExpenseDate={props.ExpenseDate} />
       <ExpenseDetails LocationOfExpenditure={props.LocationOfExpenditure} amount={amount} />
-      <button id={`del${props.Id}`} onClick={ClickHandler}>Update Expense</button>
+      <button onClick={ClickHandler}>Update Expense</button>
     </Card>
   );
 }

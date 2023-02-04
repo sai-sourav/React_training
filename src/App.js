@@ -8,9 +8,9 @@ const App = () => {
     { ExpenseDate: new Date(), LocationOfExpenditure: "Petrol", amount: 100 },
     { ExpenseDate: new Date(), LocationOfExpenditure: "Movie", amount: 200 },
   ]);
-  
+
   function getformdata(data) {
-    updateExpenses((prevState) => {return [...prevState, data]})
+    updateExpenses((prevState) => {return [data, ...prevState]})
   }
 
   return (
