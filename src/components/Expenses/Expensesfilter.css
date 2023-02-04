@@ -26,6 +26,8 @@
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid #ccc;
-    width: 5rem;
+    width:max-content;
     max-width: 100%;
+    justify-content: center;
+    /* text-align: center; */
 }
