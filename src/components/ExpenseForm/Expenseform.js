@@ -1,10 +1,13 @@
 import './Expenseform.css';
 import { useState } from 'react';
+
 const ExpenseForm = (props) => {
 
   const [title, enteredTitle] = useState("");
   const [Amount, enteredAmount] = useState('');
   const [date, enteredDate] = useState("");
+
+  const [showform, changeform] = useState(false);
 
   // const [userInput, updatedUserInput] = useState({
   //   enteredTitle : '',
@@ -57,6 +60,18 @@ const ExpenseForm = (props) => {
     enteredDate("");
     enteredTitle("");
     props.callbackfromparent(inputs);
+    changeform(false);
+  }
+
+
+  if(showform === false){
+    return (
+      <form  id="addExpense" className="expenseform">
+        <div className='add-new-expense__action'>
+          <button onClick={() => changeform(true)}>Add New Expense</button>
+        </div>
+      </form>
+    )
   }
 
 
@@ -77,6 +92,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button onClick={() => changeform(false)} id="cancel">Cancel</button>
         <button type="submit" id="addexpense">Add Expense</button>
       </div>
     </form>

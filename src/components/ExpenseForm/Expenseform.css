@@ -39,6 +39,21 @@
     max-width: 100%;
 }
 
+.add-new-expense__action{
+    text-align: center;
+}
+
+.add-new-expense__action button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
 .new-expense__actions {
     text-align: right;
 }
